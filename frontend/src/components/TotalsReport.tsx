@@ -1,5 +1,6 @@
 import React from 'react';
 import { TotalsReportDto } from '../types';
+import { TrendingUp, TrendingDown, Wallet } from 'lucide-react';
 import '../styles/Report.css';
 
 /**
@@ -43,18 +44,18 @@ export const TotalsReport: React.FC<TotalsReportProps> = ({ report }) => {
             <thead>
               <tr>
                 <th>Pessoa</th>
-                <th>Total de Receitas</th>
-                <th>Total de Despesas</th>
-                <th>Saldo</th>
+                <th className="text-center">Total de Receitas</th>
+                <th className="text-center">Total de Despesas</th>
+                <th className="text-center">Saldo</th>
               </tr>
             </thead>
             <tbody>
               {report.peopleTotals.map((person) => (
                 <tr key={person.id}>
                   <td>{person.name}</td>
-                  <td className="revenue">{formatCurrency(person.totalRevenue)}</td>
-                  <td className="expense">{formatCurrency(person.totalExpense)}</td>
-                  <td className={`balance ${getBalanceClass(person.balance)}`}>
+                  <td className="revenue text-center">{formatCurrency(person.totalRevenue)}</td>
+                  <td className="expense text-center">{formatCurrency(person.totalExpense)}</td>
+                  <td className={`balance ${getBalanceClass(person.balance)} text-center`}>
                     {formatCurrency(person.balance)}
                   </td>
                 </tr>
@@ -66,15 +67,24 @@ export const TotalsReport: React.FC<TotalsReportProps> = ({ report }) => {
             <h3>Totais Gerais</h3>
             <div className="totals-grid">
               <div className="total-card">
-                <span className="label">Total de Receitas:</span>
+                <span className="label">
+                  <TrendingUp size={16} />
+                  Total de Receitas
+                </span>
                 <span className="value revenue">{formatCurrency(report.grandTotalRevenue)}</span>
               </div>
               <div className="total-card">
-                <span className="label">Total de Despesas:</span>
+                <span className="label">
+                  <TrendingDown size={16} />
+                  Total de Despesas
+                </span>
                 <span className="value expense">{formatCurrency(report.grandTotalExpense)}</span>
               </div>
-              <div className="total-card">
-                <span className="label">Saldo Líquido:</span>
+              <div className={`total-card balance-card ${getBalanceClass(report.grandNetBalance)}`}>
+                <span className="label">
+                  <Wallet size={16} />
+                  Saldo Líquido
+                </span>
                 <span className={`value balance ${getBalanceClass(report.grandNetBalance)}`}>
                   {formatCurrency(report.grandNetBalance)}
                 </span>

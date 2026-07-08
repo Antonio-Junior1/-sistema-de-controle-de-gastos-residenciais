@@ -1,51 +1,55 @@
 .list-container {
   background-color: var(--card-bg);
-  backdrop-filter: blur(16px);
   border: 1px solid var(--card-border);
-  padding: 30px;
+  border-top: 4px solid var(--primary);
+  padding: 20px;
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.04);
   transition: var(--transition);
   overflow-x: auto;
 }
 
-.list-container:hover {
-  border-color: rgba(255, 255, 255, 0.09);
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  width: 100%;
 }
 
-.list-container h2 {
-  margin-bottom: 25px;
+.list-header h2 {
+  margin-bottom: 0;
   color: var(--text-primary);
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
 }
 
 .table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
+  margin-top: 5px;
   text-align: left;
 }
 
 .table thead {
-  background-color: rgba(255, 255, 255, 0.02);
+  background-color: rgba(59, 130, 246, 0.06);
 }
 
 .table th {
-  padding: 16px 20px;
+  padding: 12px 10px;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--text-secondary);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 2px solid rgba(59, 130, 246, 0.18);
 }
 
 .table td {
-  padding: 16px 20px;
-  font-size: 14px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 14px 10px;
+  font-size: 13.5px;
+  border-bottom: 1.5px solid rgba(59, 130, 246, 0.12);
   color: var(--text-primary);
 }
 
@@ -53,17 +57,25 @@
   transition: var(--transition);
 }
 
+.table tbody tr:nth-child(even) {
+  background-color: rgba(59, 130, 246, 0.03);
+}
+
+.table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
 .table tbody tr:hover {
-  background-color: rgba(255, 255, 255, 0.02);
+  background-color: rgba(59, 130, 246, 0.08);
 }
 
 .table tbody tr:last-child td {
-  border-bottom: none;
+  border-bottom: 1.5px solid rgba(59, 130, 246, 0.12);
 }
 
 .table .value {
   font-weight: 700;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .table .value.revenue {
@@ -75,9 +87,9 @@
 }
 
 .table .type {
-  font-weight: 600;
-  font-size: 12px;
-  padding: 4px 10px;
+  font-weight: 700;
+  font-size: 10px;
+  padding: 3px 8px;
   border-radius: 6px;
   display: inline-block;
 }
@@ -93,13 +105,13 @@
 }
 
 .table button {
-  margin-right: 5px;
+  margin-right: 2px;
 }
 
 @media (max-width: 768px) {
   .table th,
   .table td {
-    padding: 12px 14px;
-    font-size: 13px;
+    padding: 10px 8px;
+    font-size: 12px;
   }
 }

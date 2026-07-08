@@ -1,35 +1,27 @@
 .form {
-  background-color: var(--card-bg);
-  backdrop-filter: blur(16px);
-  border: 1px solid var(--card-border);
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  transition: var(--transition);
-}
-
-.form:hover {
-  border-color: rgba(255, 255, 255, 0.09);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
 }
 
 .form h2 {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   color: var(--text-primary);
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 8px;
-  font-weight: 600;
-  font-size: 14px;
+  margin-bottom: 6px;
+  font-weight: 700;
+  font-size: 13px;
   color: var(--text-secondary);
 }
 
@@ -37,8 +29,8 @@
 .form-group select {
   width: 100%;
   padding: 12px 16px;
-  background-color: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: #f8fafc;
+  border: 1.5px solid rgba(59, 130, 246, 0.22);
   border-radius: 10px;
   font-size: 14px;
   color: var(--text-primary);
@@ -47,27 +39,27 @@
 }
 
 .form-group input::placeholder {
-  color: rgba(255, 255, 255, 0.25);
+  color: #94a3b8;
 }
 
 .form-group input:focus,
 .form-group select:focus {
   outline: none;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: #ffffff;
   border-color: var(--primary);
   box-shadow: 0 0 0 3px var(--primary-glow);
 }
 
 .form-group input:disabled,
 .form-group select:disabled {
-  background-color: rgba(255, 255, 255, 0.01);
+  background-color: #f1f5f9;
   color: var(--text-secondary);
-  border-color: rgba(255, 255, 255, 0.04);
+  border-color: rgba(59, 130, 246, 0.05);
   cursor: not-allowed;
 }
 
 .form-group select option {
-  background-color: #0b0f19;
+  background-color: #ffffff;
   color: var(--text-primary);
 }
 
@@ -80,5 +72,5 @@
 
 .form button {
   width: 100%;
-  margin-top: 15px;
+  margin-top: 10px;
 }
