@@ -1,6 +1,6 @@
 # Sistema de Controle de Gastos Residenciais
 
-Este projeto é um sistema de controle de gastos residenciais desenvolvido como parte de um teste técnico. O sistema permite o cadastro de pessoas, o registro de transações financeiras (receitas e despesas) e a visualização de relatórios consolidados de totais.
+Este projeto é um sistema de controle de gastos residenciais desenvolvido . O sistema permite o cadastro de pessoas, o registro de transações financeiras (receitas e despesas) e a visualização de relatórios consolidados de totais.
 
 ## Tecnologias Utilizadas
 
