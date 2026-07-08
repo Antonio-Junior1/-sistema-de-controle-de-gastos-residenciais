@@ -1,0 +1,105 @@
+.list-container {
+  background-color: var(--card-bg);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--card-border);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: var(--transition);
+  overflow-x: auto;
+}
+
+.list-container:hover {
+  border-color: rgba(255, 255, 255, 0.09);
+}
+
+.list-container h2 {
+  margin-bottom: 25px;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.table thead {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.table th {
+  padding: 16px 20px;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.table td {
+  padding: 16px 20px;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  color: var(--text-primary);
+}
+
+.table tbody tr {
+  transition: var(--transition);
+}
+
+.table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table .value {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.table .value.revenue {
+  color: var(--revenue);
+}
+
+.table .value.expense {
+  color: var(--expense);
+}
+
+.table .type {
+  font-weight: 600;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.table .type.revenue {
+  background-color: var(--revenue-glow);
+  color: var(--revenue);
+}
+
+.table .type.expense {
+  background-color: var(--expense-glow);
+  color: var(--expense);
+}
+
+.table button {
+  margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+  .table th,
+  .table td {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+}

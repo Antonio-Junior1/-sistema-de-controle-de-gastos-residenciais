@@ -1,0 +1,23 @@
+# Build and Output
+bin/
+obj/
+dist/
+node_modules/
+
+# Database Files
+*.db
+*.db-shm
+*.db-wal
+
+# User/IDE settings
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# OS specific files
+.DS_Store
+Thumbs.db
